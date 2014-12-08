@@ -4,14 +4,14 @@ public class IntegerRightTriangles
     public IntegerRightTriangles()
     {
         int[] triangle = new int[3];
-        boolean dc = true;
+        boolean d = true;
         for(int a = 1; a < 1000; a ++)
         {
-            for(int b = a; a + b < 1000 && a; b++)
+            for(int b = a; a + b < 1000 && d; b++)
             {
-                for(int c = b; a + b + c < 1000 && a; c ++)
+                for(int c = b; a + b + c < 1000 && d; c ++)
                 {
-                    if(a *a + b *b = c *c)
+                    if((a *a) + (b * b) = (c *c))
                     {
                         triangle[0] = a;
                         triangle[1] = b;
@@ -20,6 +20,7 @@ public class IntegerRightTriangles
                     }
                 }
             }
+            d = true;
         }
     }
     
