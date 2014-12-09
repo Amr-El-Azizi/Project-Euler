@@ -1,29 +1,26 @@
 public class IntegerRightTriangles
 {
-    int[][] triangles = new int[1][1];
+    int[][] triangles = new int[1][3];
     int[] perimeters = new int[1];
     int[] perimetercount = new int[1];
+    int[] triangle = new int[3];
     public IntegerRightTriangles()
     {
-        int[] triangle = new int[3];
-        boolean d = true;
         for(int a = 1; a + a + a <= 1000; a ++)
         {
-            for(int b = a; a + b + b <= 1000 && d; b++)
+            for(int b = a; a + b + b <= 1000; b++)
             {
-                for(int c = b; a + b + c <= 1000 && d; c ++)
+                for(int c = b; a + b + c <= 1000; c ++)
                 {
-                    if((a *a) + (b * b) == (c *c))
+                    if((a * a) + (b * b) == (c * c))
                     {
                         triangle[0] = a;
                         triangle[1] = b;
                         triangle[2] = c;
                         add(triangle);
-                        d = false;
                     }
                 }
             }
-            d = true;
         }
         int perimeter = 0;
         boolean s = true;
@@ -46,17 +43,27 @@ public class IntegerRightTriangles
             perimeter = 0;
             s = true;
         }
+        int greatestcount = 0;
         int greatest = 0;
-        int greatestindex = 0;
         for(int i = 0; i < perimeters.length; i ++)
-            if(perimetercount[i] > greatest)
-            greatest = perimeters[i];
+            {
+                if(perimetercount[i] > greatestcount)
+                {
+                    greatest = perimeters[i];
+                    greatestcount = perimetercount[i];
+                }
+            }
         
-        for(int[] tri: triangles)
-        {   
-            print(tri);
-            System.out.println("");
-        }
+        System.out.println(greatest);
+        
+        for(int i = 0; i < perimeters.length; i ++)
+        if(perimeters[i] == 420)
+        System.out.println(perimetercount[i]);
+        //for(int[] tri: triangles)
+        //{   
+              // print(tri);
+               //System.out.println("");
+        //}
     }
     
     public void add(int[] arr)
@@ -64,7 +71,8 @@ public class IntegerRightTriangles
         int tln = triangles.length;
         int[][] temptriangles = new int[tln+1][3];
         for(int i = 0; i < tln; i ++)
-        temptriangles[i] = triangles[i];
+            for(int x = 0; x < 3; x ++)
+                temptriangles[i][x] = triangles[i][x];
         temptriangles[tln] = arr;
         triangles = temptriangles;
     }

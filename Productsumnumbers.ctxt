@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Productsumnumbers()
+comment1.params=x
+comment1.target=void\ addN(int)
+comment2.params=x
+comment2.target=void\ addK(int)
+comment3.params=arr
+comment3.target=int\ sum(int[])
+comment4.params=arr
+comment4.target=int\ sumN(int[])
+comment5.params=arr
+comment5.target=int\ product(int[])
+comment6.params=arr
+comment6.target=void\ print(int[])
+numComments=7
