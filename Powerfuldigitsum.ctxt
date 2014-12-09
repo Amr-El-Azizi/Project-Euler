@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Powerfuldigitsum()
+comment1.params=number
+comment1.target=java.math.BigInteger\ digitalsum(java.math.BigInteger)
+numComments=2
