@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=AnagramicSquares()
+comment1.params=one\ two
+comment1.target=void\ swap(int,\ int)
+comment2.params=arr
+comment2.target=void\ print(java.lang.String[])
+comment2.text=public\ void\ add\ (String[]\ arr,\ String\ word)\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ int\ aln\ \=\ arr.length;\r\n\ \ \ \ \ \ \ \ String[]\ temp\ \=\ new\ String[aln+1];\r\n\ \ \ \ \ \ \ \ for(int\ i\ \=\ 0;\ i\ <\ aln;\ i\ ++)\r\n\ \ \ \ \ \ \ \ temp[i]\ \=\ arr[i];\r\n\ \ \ \ \ \ \ \ temp[aln]\ \=\ word;\r\n\ \ \ \ \ \ \ \ for(int\ i\ \=\ 0;\ i\ <\ aln;\ i\ ++\r\n}
+comment3.params=AL
+comment3.target=java.util.ArrayList\ sort(java.util.ArrayList)
+comment4.params=s
+comment4.target=java.lang.String\ fix(java.lang.String)
+comment5.params=a\ b
+comment5.target=boolean\ check(java.lang.String,\ java.lang.String)
+comment6.params=arr
+comment6.target=java.util.ArrayList\ addList(char[])
+numComments=7
