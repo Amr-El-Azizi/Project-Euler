@@ -35,7 +35,10 @@ public class AnagramicSquares
     public ArrayList<String> ln12s = new ArrayList<String>(0);
     public ArrayList<String> ln13s = new ArrayList<String>(0);
     public ArrayList<String> ln14s = new ArrayList<String>(0);
-    public ArrayList[][] pairs = new ArrayList[0][0];
+    public ArrayList<String> blank = new ArrayList<String>(0);
+    public ArrayList<ArrayList<String>> pairs = new ArrayList();
+    public ArrayList arrvar1 = new ArrayList();
+    public ArrayList arrvar2 = new ArrayList();
     public AnagramicSquares()
     {
         alphabet = addList(Alphabet);
@@ -134,19 +137,410 @@ public class AnagramicSquares
         
         boolean checker = true;
         int counter = 0;
+        
         for(int i = 0; i < ln1s.size(); i ++)
         {
             for(int x = i + 1; x < ln1s.size(); x ++)
             {
-                if(checker && ln1s.get(i).equals(ln1s.get(i)))
+                if(checker && ln1s.get(i).equals(ln1s.get(x)))
                 {
-                    pairs[0] == (ln1.get(i));
-                    pairs[1] == (ln1.get(x));
+                    pairs.add(new ArrayList<String>(0));
+                    pairs.get(counter).add(ln1.get(i));
+                    pairs.get(counter).add(ln1.get(x));
                     checker = false;
                     counter ++;
                 }
+                else if(checker == false && ln1s.get(i).equals(ln1s.get(x)))
+                {
+                    pairs.get(counter).add(ln1.get(x));
+                }
+            }
+            checker = true;
+        }
+        
+        for(int i = 0; i < ln2s.size(); i ++)
+        {
+            for(int x = i + 1; x < ln2s.size(); x ++)
+            {
+                if(checker && ln2s.get(i).equals(ln2s.get(x)))
+                {
+                    pairs.add(new ArrayList<String>(0));
+                    pairs.get(counter).add(ln2.get(i));
+                    pairs.get(counter).add(ln2.get(x));
+                    checker = false;
+                    counter ++;
+                }
+                else if(checker == false && ln2s.get(i).equals(ln2s.get(x)))
+                {
+                    pairs.get(0).add(ln2.get(x));
+                }
+            }
+            checker = true;
+        }
+
+        for(int i = 0; i < ln3s.size(); i ++)
+        {
+            for(int x = i + 1; x < ln3s.size(); x ++)
+            {
+                if(checker && ln3s.get(i).equals(ln3s.get(x)))
+                {
+                    pairs.add(new ArrayList<String>(0));
+                    pairs.get(counter).add(ln3.get(i));
+                    pairs.get(counter).add(ln3.get(x));
+                    checker = false;
+                    counter ++;
+                }
+                else if(checker == false && ln3s.get(i).equals(ln3s.get(x)))
+                {
+                    pairs.get(0).add(ln3.get(x));
+                }
+            }
+            checker = true;
+        }
+        
+        for(int i = 0; i < ln4s.size(); i ++)
+        {
+            for(int x = i + 1; x < ln4s.size(); x ++)
+            {
+                if(checker && ln4s.get(i).equals(ln4s.get(x)))
+                {
+                    pairs.add(new ArrayList<String>(0));
+                    pairs.get(counter).add(ln4.get(i));
+                    pairs.get(counter).add(ln4.get(x));
+                    checker = false;
+                    counter ++;
+                }
+                else if(checker == false && ln4s.get(i).equals(ln4s.get(x)))
+                {
+                    pairs.get(0).add(ln4.get(x));
+                }
+            }
+            checker = true;
+        }
+        
+        for(int i = 0; i < ln5s.size(); i ++)
+        {
+            for(int x = i + 1; x < ln5s.size(); x ++)
+            {
+                if(checker && ln5s.get(i).equals(ln5s.get(x)))
+                {
+                    pairs.add(new ArrayList<String>(0));
+                    pairs.get(counter).add(ln5.get(i));
+                    pairs.get(counter).add(ln5.get(x));
+                    checker = false;
+                    counter ++;
+                }
+                else if(checker == false && ln5s.get(i).equals(ln5s.get(x)))
+                {
+                    pairs.get(0).add(ln5.get(x));
+                }
+            }
+            checker = true;
+        }
+        
+        for(int i = 0; i < ln6s.size(); i ++)
+        {
+            for(int x = i + 1; x < ln6s.size(); x ++)
+            {
+                if(checker && ln6s.get(i).equals(ln6s.get(x)))
+                {
+                    pairs.add(new ArrayList<String>(0));
+                    pairs.get(counter).add(ln6.get(i));
+                    pairs.get(counter).add(ln6.get(x));
+                    checker = false;
+                    counter ++;
+                }
+                else if(checker == false && ln6s.get(i).equals(ln6s.get(x)))
+                {
+                    pairs.get(0).add(ln6.get(x));
+                    counter ++;
+                }
+            }
+            checker = true;
+        }
+        
+        for(int i = 0; i < ln7s.size(); i ++)
+        {
+            for(int x = i + 1; x < ln7s.size(); x ++)
+            {
+                if(checker && ln7s.get(i).equals(ln7s.get(x)))
+                {
+                    pairs.add(new ArrayList<String>(0));
+                    pairs.get(counter).add(ln7.get(i));
+                    pairs.get(counter).add(ln7.get(x));
+                    checker = false;
+                    counter ++;
+                }
+                else if(checker == false && ln7s.get(i).equals(ln7s.get(x)))
+                {
+                    pairs.get(0).add(ln7.get(x));
+                    counter ++;
+                }
+            }
+            checker = true;
+        }
+        
+        for(int i = 0; i < ln8s.size(); i ++)
+        {
+            for(int x = i + 1; x < ln8s.size(); x ++)
+            {
+                if(checker && ln8s.get(i).equals(ln8s.get(x)))
+                {
+                    pairs.add(new ArrayList<String>(0));
+                    pairs.get(counter).add(ln8.get(i));
+                    pairs.get(counter).add(ln8.get(x));
+                    checker = false;
+                    counter ++;
+                }
+                else if(checker == false && ln8s.get(i).equals(ln8s.get(x)))
+                {
+                    pairs.get(0).add(ln8.get(x));
+                    counter ++;
+                }
+            }
+            checker = true;
+        }
+        
+        for(int i = 0; i < ln9s.size(); i ++)
+        {
+            for(int x = i + 1; x < ln9s.size(); x ++)
+            {
+                if(checker && ln9s.get(i).equals(ln9s.get(x)))
+                {
+                    pairs.add(new ArrayList<String>(0));
+                    pairs.get(counter).add(ln9.get(i));
+                    pairs.get(counter).add(ln9.get(x));
+                    checker = false;
+                    counter ++;
+                }
+                else if(checker == false && ln9s.get(i).equals(ln9s.get(x)))
+                {
+                    pairs.get(0).add(ln9.get(x));
+                    counter ++;
+                }
+            }
+            checker = true;
+        }
+        
+        for(int i = 0; i < ln10s.size(); i ++)
+        {
+            for(int x = i + 1; x < ln10s.size(); x ++)
+            {
+                if(checker && ln10s.get(i).equals(ln10s.get(x)))
+                {
+                    pairs.add(new ArrayList<String>(0));
+                    pairs.get(counter).add(ln10.get(i));
+                    pairs.get(counter).add(ln10.get(x));
+                    checker = false;
+                    counter ++;
+                }
+                else if(checker == false && ln10s.get(i).equals(ln10s.get(x)))
+                {
+                    pairs.get(0).add(ln10.get(x));
+                    counter ++;
+                }
+            }
+            checker = true;
+        }
+        
+        for(int i = 0; i < ln11s.size(); i ++)
+        {
+            for(int x = i + 1; x < ln11s.size(); x ++)
+            {
+                if(checker && ln11s.get(i).equals(ln11s.get(x)))
+                {
+                    pairs.add(new ArrayList<String>(0));
+                    pairs.get(counter).add(ln11.get(i));
+                    pairs.get(counter).add(ln11.get(x));
+                    checker = false;
+                    counter ++;
+                }
+                else if(checker == false && ln11s.get(i).equals(ln11s.get(x)))
+                {
+                    pairs.get(0).add(ln11.get(x));
+                    counter ++;
+                }
+            }
+            checker = true;
+        }
+        
+        for(int i = 0; i < ln12s.size(); i ++)
+        {
+            for(int x = i + 1; x < ln12s.size(); x ++)
+            {
+                if(checker && ln12s.get(i).equals(ln12s.get(x)))
+                {
+                    pairs.add(new ArrayList<String>(0));
+                    pairs.get(counter).add(ln12.get(i));
+                    pairs.get(counter).add(ln12.get(x));
+                    checker = false;
+                    counter ++;
+                }
+                else if(checker == false && ln12s.get(i).equals(ln12s.get(x)))
+                {
+                    pairs.get(0).add(ln12.get(x));
+                    counter ++;
+                }
+            }
+            checker = true;
+        }
+        
+        for(int i = 0; i < ln12s.size(); i ++)
+        {
+            for(int x = i + 1; x < ln13s.size(); x ++)
+            {
+                if(checker && ln13s.get(i).equals(ln13s.get(x)))
+                {
+                    pairs.add(new ArrayList<String>(0));
+                    pairs.get(counter).add(ln13.get(i));
+                    pairs.get(counter).add(ln13.get(x));
+                    checker = false;
+                    counter ++;
+                }
+                else if(checker == false && ln13s.get(i).equals(ln13s.get(x)))
+                {
+                    pairs.get(0).add(ln13.get(x));
+                    counter ++;
+                }
+            }
+            checker = true;
+        }
+        
+        for(int i = 0; i < ln14s.size(); i ++)
+        {
+            for(int x = i + 1; x < ln14s.size(); x ++)
+            {
+                if(checker && ln14s.get(i).equals(ln14s.get(x)))
+                {
+                    pairs.add(new ArrayList<String>(0));
+                    pairs.get(counter).add(ln14.get(i));
+                    pairs.get(counter).add(ln14.get(x));
+                    checker = false;
+                    counter ++;
+                }
+                else if(checker == false && ln14s.get(i).equals(ln14s.get(x)))
+                {
+                    pairs.get(0).add(ln14.get(x));
+                    counter ++;
+                }
+            }
+            checker = true;
+        }
+        
+        
+        int ln = 0;
+        counter = 0;
+        int index = 0;
+        int index2 = 0;
+        boolean s = true;
+        boolean f = true;
+        boolean ab = false;
+        double greatestsquare = 0;
+        outer: for(int i = 0; i < pairs.size(); i++)
+        {
+            ln = pairs.get(i).get(0).length();
+            int[] temp = new int[ln];
+            for(int x = 0; x < ln; x ++)
+             temp[x] = 1;
+            s = true;
+            f = true;
+            index = ln - 1;
+            while(f)
+            {
+                temp[index] ++;
+                
+                ab = false;
+                for(int x = 0; x < ln; x ++)
+                {
+                    if(temp[x] != 9)
+                    {
+                        ab = true;
+                    }
+                    
+                    if(ab == false)
+                    continue outer;
+                }
+                
+                ab = false;
+                
+                while(s)
+                {
+                    if(temp[index2] == 10)
+                    {
+                        temp[index2] = 1;
+                        temp[index2-1] ++;
+                        index2 = 0;
+                    }
+                    
+                    if(index2 < ln-1)
+                    index2 ++;
+                    else
+                    s = false;
+                }
+                print(temp);
+                s = true;
+                double variable = Math.sqrt(arrdigitstoint(temp));
+                arrvar1.add(variable);
+                if((variable == Math.floor(variable)) && !Double.isInfinite(variable) && doublescheck(temp, pairs.get(i).get(0)))
+                {
+                    double var = Math.sqrt(match(pairs.get(i).get(0), pairs.get(i).get(1), temp));
+                    arrvar2.add(var);
+                    if((var == Math.floor(var)) && !Double.isInfinite(var))
+                    {
+                        if(variable > greatestsquare)
+                        greatestsquare = variable * variable;
+                        if(var > greatestsquare)
+                        greatestsquare = var * var;
+                    }
+                }
+                
+                
             }
         }
+        
+        System.out.println(greatestsquare);
+    }
+    
+    public boolean doublescheck(int[] arr, String str)
+    {
+        int ln = arr.length;
+        for(int i = 0; i < ln; i ++)
+        {
+            for(int x = i; x < ln; x ++)
+            {
+                if(arr[i] == arr[x] && str.charAt(i) != str.charAt(x))
+                return false;
+            }
+        }
+        
+        return true;
+    }
+    
+    public int match(String str1, String str2, int[]temp)
+    {
+        int ln = temp.length;
+        int[] temp2 = new int[ln];
+        for(int i = 0; i < ln; i ++)
+        {
+            for(int x = 0; x < ln; x ++)
+            {
+                if(str1.substring(x,x+1).equals(str2.substring(i,i+1)))
+                temp2[i] = temp[x];
+            }
+        }
+        return arrdigitstoint(temp2);
+    }
+    
+    public int arrdigitstoint (int[] arr)
+    {
+        int digit = 0;
+        int tens = 1;
+        for(int i = 0; i < arr.length; i ++)
+        {
+            digit += arr[i]*10;
+            tens = tens * 10;
+        }
+        return digit;
     }
     
     public void swap (int one, int two)
@@ -208,4 +602,10 @@ public class AnagramicSquares
         return temp;
     }
     
+    public void print(int[] arr)
+    {
+        for(int x : arr)
+        System.out.print(x + "\t");
+        System.out.println("\n");
+    }
 }
