@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=m\ n
+comment0.target=LongProducts(java.math.BigInteger,\ java.math.BigInteger)
+comment1.params=
+comment1.target=java.math.BigInteger\ product()
+numComments=2

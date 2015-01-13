@@ -5,7 +5,7 @@ public class primefactorsofn15plus1checker
     {
         int counter = 0;
         boolean a = true;
-        for(long i = 3; i <= num(z) && counter < 50000; i ++)
+        for(long i = 3; i <= num(z) && counter < 500000; i ++)
         {
             if(num(z) % i == 0 && i%2 == 1)
             { 
@@ -15,7 +15,6 @@ public class primefactorsofn15plus1checker
                 if(a && i < y)
                 {
                     sum += i;
-                    System.out.println(sum);
                 }
             }
             counter ++;
@@ -30,7 +29,6 @@ public class primefactorsofn15plus1checker
         for(int i = 0; i < 15; i ++)
         x = x * n;
         x ++;
-        System.out.println(x);
         return x;
     }
 }
